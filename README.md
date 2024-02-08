@@ -1,4 +1,4 @@
-# Spring POS System (Point of Sale)
+# ✌️Spring POS System (Point of Sale)
 
 ### FrontEnd
 
