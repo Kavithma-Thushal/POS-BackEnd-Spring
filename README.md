@@ -14,8 +14,8 @@
 * Spring
 * Java 8
 * MySQL
-* Hibernate
 * Maven
+* Hibernate
 
 ### Functions
 
