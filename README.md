@@ -34,6 +34,7 @@ facilitating rapid development and deployment.
 * MySQL
 * Maven
 * Hibernate
+* Tomcat 9
 
 ### Functions
 
