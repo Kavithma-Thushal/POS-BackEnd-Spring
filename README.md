@@ -41,7 +41,7 @@ facilitating rapid development and deployment.
 ✅User can Save, Search, Update, Delete & Get All Customers<br/>
 ✅User can Save, Search, Update, Delete & Get All Items<br/>
 ✅User can manage Orders<br/>
-✅User can view Order Details<br/>
+✅User can view Order Details.<br/>
 
 ### How to use
 
