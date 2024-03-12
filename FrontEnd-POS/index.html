@@ -2,94 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Web POS</title>
-    <link rel="icon" href="assets/styles/logo.png">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <!--link Bootstrap Framework-->
-    <link href="assets/styles/bootstrap-5.2.1-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/styles/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/styles/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/logo.png">
+    <title>Spring POS</title>
+
+    <!--Link Bootstrap Framework-->
+    <link rel="stylesheet" href="assets/Bootstrap/bootstrap-5.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/Bootstrap/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 
 <body>
+<!--Navigation-->
 <header>
-    <!--Nav started-->
-    <nav class="navbar navbar-expand-lg navbar-light shadow-lg posNavi position-relative rounded-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark posNavi position-relative p-3">
         <div class="container-fluid">
-            <a class="navbar-brand text-dark fw-bold " href="#">
-                <span class="text-primary"> Thushal </span> POS System
+            <a class="navbar-brand text-light fw-bold" href="#">
+                Spring | <span style="color: dodgerblue">POS </span>
             </a>
             <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                     class="navbar-toggler" data-bs-target="#navbarSupportedContent"
                     data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item" id="homeBtn">
-                        <a aria-current="page" class="nav-link active" href="index.html">Home</a>
+                        <a aria-current="page" class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item" id="customerBtn">
-                        <a class="nav-link" href="pages/customer.html">Customer </a>
+                        <a class="nav-link active" href="pages/customer.html">Customers</a>
                     </li>
                     <li class="nav-item" id="itemBtn">
-                        <a class="nav-link" href="pages/item.html">Items</a>
+                        <a class="nav-link active" href="pages/item.html">Items</a>
                     </li>
                     <li class="nav-item" id="orderBtn">
-                        <a class="nav-link" href="pages/orders.html">Orders</a>
+                        <a class="nav-link active" href="pages/orders.html">PlaceOrder</a>
                     </li>
                     <li class="nav-item" id="orderDetailsBtn">
-                        <a class="nav-link" href="pages/orderDetails.html">Order Details</a>
+                        <a class="nav-link active" href="pages/orderDetails.html">OrderView</a>
                     </li>
-
                 </ul>
             </div>
         </div>
     </nav>
-    <!--Nav ended-->
 </header>
 
-<!-- Home Start-->
+<!--Home-->
 <main class="container-fluid mt-2" id="HomeSection">
-    <div class="jumbotron pt-md-4">
+    <div class="jumbotron mt-5">
         <div id="home-tiles">
-            <div class="row ">
+            <div class="row">
                 <div class="col-lg-6 col-xl-3 mb-2">
                     <div class="card sectionBorder">
-                        <div class="card-header bg-primary font-weight-bolder">Customers</div>
-                        <div class="card-body">
-                            <div class="dash-tile-icon"><i class="bi bi-people-fill"></i></div>
-                            <div class="dash-tile-text text-right text-black-50"><h2 id="txtCustomerCount">00</h2></div>
+                        <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Customers</div>
+                        <div class="card-body d-flex justify-content-around align-items-center">
+                            <div class="dash-tile-icon me-2"><i class="bi bi-people-fill"></i></div>
+                            <div class="dash-tile-text text-black-50"><h1 id="txtCustomerCount">00</h1></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-3 mb-2">
                     <div class="card sectionBorder">
-                        <div class="card-header bg-primary font-weight-bolder">Items</div>
-                        <div class="card-body">
+                        <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Items</div>
+                        <div class="card-body d-flex justify-content-around align-items-center">
                             <div class="dash-tile-icon"><i class="bi bi-boxes"></i></div>
-                            <div class="dash-tile-text text-right text-black-50"><h2 id="txtItemsCount">00</h2></div>
+                            <div class="dash-tile-text text-black-50"><h1 id="txtItemsCount">00</h1></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-3 mb-2">
                     <div class="card sectionBorder">
-                        <div class="card-header bg-primary font-weight-bolder">My Orders</div>
-                        <div class="card-body">
+                        <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Orders</div>
+                        <div class="card-body d-flex justify-content-around align-items-center">
                             <div class="dash-tile-icon"><i class="bi bi-cart-fill"></i></div>
-                            <div class="dash-tile-text text-right text-black-50"><h2 id="txtOrderCount">00</h2></div>
+                            <div class="dash-tile-text text-black-50"><h1 id="txtOrderCount">00</h1></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-3 mb-2">
                     <div class="card sectionBorder">
-                        <div class="card-header bg-primary font-weight-bolder">Settings</div>
-                        <div class="card-body">
+                        <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Settings</div>
+                        <div class="card-body d-flex justify-content-around align-items-center">
                             <div class="dash-tile-icon" style=""><i class="bi bi-gear-wide-connected"></i></div>
-                            <div class="dash-tile-text text-right text-black-50">
-                                <h2>
-                                    <button class="btn btn-danger">new</button>
-                                </h2>
+                            <div>
+                                <button class="btn btn-danger">New</button>
                             </div>
                         </div>
                     </div>
@@ -98,14 +95,9 @@
         </div>
     </div>
 </main>
-<!-- Home End-->
 
-<!--Import js for bootstrap-->
-<script src="assets/styles/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
-
-<!--import jQuery library-->
-<script rel="script" src="assets/styles/jQuery/jquery-3.6.1.min.js"></script>
-
+<script src="assets/Bootstrap/bootstrap-5.2.1/js/bootstrap.min.js"></script>
+<script src="assets/jQuery/jquery-3.6.1.min.js"></script>
 <script src="controllers/DashboardController.js"></script>
 </body>
 </html>

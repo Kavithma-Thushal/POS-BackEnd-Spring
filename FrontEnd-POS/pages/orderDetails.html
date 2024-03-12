@@ -2,140 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Web POS</title>
-    <link rel="icon" href="../assets/styles/logo.png">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <!--link Bootstrap Framework-->
-    <link href="../assets/styles/bootstrap-5.2.1-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/styles/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/styles/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../assets/logo.png">
+    <title>OrderDetails Management</title>
+
+    <!--Link Bootstrap Framework-->
+    <link rel="stylesheet" href="../assets/Bootstrap/bootstrap-5.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/Bootstrap/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
 </head>
 
 <body>
+<!--Navigation-->
 <header>
-    <!--Nav started-->
-    <nav class="navbar navbar-expand-lg navbar-light shadow-lg posNavi position-relative rounded-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark posNavi position-relative p-3">
         <div class="container-fluid">
-            <a class="navbar-brand text-dark fw-bold " href="#">
-                <span class="text-primary"> Thushal </span> POS System
+            <a class="navbar-brand text-light fw-bold" href="#">
+                Spring | <span style="color: dodgerblue">POS </span>
             </a>
             <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                     class="navbar-toggler" data-bs-target="#navbarSupportedContent"
                     data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item" id="homeBtn">
                         <a aria-current="page" class="nav-link active" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item" id="customerBtn">
-                        <a class="nav-link" href="customer.html">Customer </a>
+                        <a class="nav-link active" href="customer.html">Customers</a>
                     </li>
                     <li class="nav-item" id="itemBtn">
-                        <a class="nav-link" href="item.html">Items</a>
+                        <a class="nav-link active" href="item.html">Items</a>
                     </li>
                     <li class="nav-item" id="orderBtn">
-                        <a class="nav-link" href="orders.html">Orders</a>
+                        <a class="nav-link active" href="orders.html">PlaceOrder</a>
                     </li>
                     <li class="nav-item" id="orderDetailsBtn">
-                        <a class="nav-link" href="orderDetails.html">Order Details</a>
+                        <a class="nav-link active" href="#">OrderView</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!--Nav ended-->
 </header>
 
-<!-- OrderDetails Start-->
+<!--Order Details-->
 <main class="container-fluid" id="OrderDetails">
-    <!-- Order Header Start -->
     <div class="container d-flex flex-grow-1 flex-column">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
-            <h2 id="H1" style="font-family: 'Arial Rounded MT Bold',serif"><i
-                    class="bi bi-cart-check"></i> Orders View
-            </h2>
+            <h2 id="H1"><i class="bi bi-cart-check-fill"></i> Orders View</h2>
         </div>
     </div>
-    <!-- Order Header End -->
-
-    <!-- Order Header Section Start -->
-    <div class="container d-flex flex-grow-1 flex-column sectionBorder"
-         style="background-color: #dfe4ea;height: max-content">
-        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
-            <h6 id="H6-4">Home > Orders Details</h6>
-            <hr>
-        </div>
-        <!-- Order Header Section End -->
-
-        <!-- Order Details Section Start -->
+    <div class="container d-flex flex-grow-1 flex-column mt-2 mb-5 sectionBorder"
+         style="background-color: #f0f0f0; height: max-content">
         <div class="row justify-content-around" style="height: max-content">
-
-            <div class="row justify-content-evenly h-50">
-
-                <!-- Table Order -->
-                <section
-                        class="d-flex flex-column h-100 col-10 col-xl-11 shadow-lg rounded-3 align-items-center pt-3 mt-2 mb-4 sectionBorder "
-                        style="background: white">
-                    <h4 class="text-center p-2 text-light rounded-2 col-12 ubFt" style="background: dodgerblue">Orders</h4>
-                    <!-- View Orders Table Start -->
-                    <div class="col-11 justify-content-around " style="height: 250px;">
-                        <div class="PlaceOrderTableDiv overflow-auto" style="height: 230px;">
-                            <table class="table table-primary table-striped table-bordered table-hover">
-                                <thead class="text-light table-dark text-center  table-bordered sticky-top">
-                                <tr>
-                                    <th>Order Id</th>
-                                    <th>Order Date</th>
-                                    <th>Customer Id</th>
-                                </tr>
-                                </thead>
-                                <tbody id="tblOrder"></tbody>
-                            </table>
-                        </div>
+            <div class="row justify-content-evenly">
+                <!--Orders Table-->
+                <div class="col-11 justify-content-around sectionBorder mt-5 mb-5" style="background: white">
+                    <h5 class="text-center p-2 text-light rounded-3 mt-3" style="background: dodgerblue">Orders</h5>
+                    <div class="customerTableDiv">
+                        <table class="table table-bordered mt-3">
+                            <thead class="text-light table-dark text-center table-bordered">
+                            <tr>
+                                <th class="w-25">Order ID</th>
+                                <th class="w-25">Order Date</th>
+                                <th class="w-25">Customer ID</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblOrder"></tbody>
+                        </table>
                     </div>
-                </section>
-                <!-- View Orders Table End -->
-
-                <!-- Table Order Details-->
-                <section
-                        class="d-flex flex-column h-100 col-10 col-xl-11 shadow-lg rounded-3 align-items-center pt-3 sectionBorder "
-                        style="background: white">
-                    <h4 class="text-center  p-2 text-light rounded-2 col-12 " style="background: dodgerblue">Orders
-                        Details</h4>
-                    <!-- View Order Details Table Start -->
-                    <div class="col-11 justify-content-around " style="height: 250px;">
-                        <div class="PlaceOrderTableDiv overflow-auto" style="height: 230px;">
-                            <table class="table table-primary table-striped table-bordered table-hover">
-                                <thead class="text-light table-dark text-center  table-bordered sticky-top">
-                                <tr>
-                                    <th>Order Id</th>
-                                    <th>Item Code</th>
-                                    <th>Qty</th>
-                                    <th>Total</th>
-                                </tr>
-                                </thead>
-                                <tbody id="tblOrderDetails"></tbody>
-                            </table>
-                        </div>
+                </div>
+                <!--OrdersDetails Table-->
+                <div class="col-11 justify-content-around sectionBorder mb-5" style="background: white">
+                    <h5 class="text-center p-2 text-light rounded-3 mt-3" style="background: dodgerblue">Order
+                        Details</h5>
+                    <div class="customerTableDiv">
+                        <table class="table table-bordered mt-3">
+                            <thead class="text-light table-dark text-center table-bordered">
+                            <tr>
+                                <th class="w-25">Order ID</th>
+                                <th class="w-25">Item Code</th>
+                                <th class="w-25">Qty</th>
+                                <th class="w-25">Total</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblOrderDetails"></tbody>
+                        </table>
                     </div>
-                </section>
-                <!-- View Order Details Table End -->
-
+                </div>
             </div>
-
         </div>
-        <!-- Order Details Section End -->
     </div>
 </main>
-<!-- OrderDetails End-->
 
-<!--Import js for bootstrap-->
-<script src="../assets/styles/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
-
-<!--import jQuery library-->
-<script rel="script" src="../assets/styles/jQuery/jquery-3.6.1.min.js"></script>
-
+<script src="../assets/Bootstrap/bootstrap-5.2.1/js/bootstrap.min.js"></script>
+<script src="../assets/jQuery/jquery-3.6.1.min.js"></script>
 <script src="../controllers/OrderViewsController.js"></script>
 </body>
 </html>

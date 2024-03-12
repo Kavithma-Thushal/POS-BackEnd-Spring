@@ -2,144 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Web POS</title>
-    <link rel="icon" href="../assets/styles/logo.png">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <!--link Bootstrap Framework-->
-    <link href="../assets/styles/bootstrap-5.2.1-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/styles/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/styles/sweetalert2-11.6.16/sweetalert2.min.css" rel="stylesheet">
-    <link href="../assets/styles/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../assets/logo.png">
+    <title>Item Management</title>
+
+    <!--Link Bootstrap Framework-->
+    <link rel="stylesheet" href="../assets/Bootstrap/bootstrap-5.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/Bootstrap/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/styles/sweetalert-11.6.16/sweetalert.min.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
 </head>
 
 <body>
+<!--Navigation-->
 <header>
-    <!--Nav started-->
-    <nav class="navbar navbar-expand-lg navbar-light shadow-lg posNavi position-relative rounded-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark posNavi position-relative p-3">
         <div class="container-fluid">
-            <a class="navbar-brand text-dark fw-bold " href="#">
-                <span class="text-primary"> Thushal </span> POS System
+            <a class="navbar-brand text-light fw-bold" href="#">
+                Spring | <span style="color: dodgerblue">POS </span>
             </a>
             <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                     class="navbar-toggler" data-bs-target="#navbarSupportedContent"
                     data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item" id="homeBtn">
                         <a aria-current="page" class="nav-link active" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item" id="customerBtn">
-                        <a class="nav-link" href="customer.html">Customer </a>
+                        <a class="nav-link active" href="customer.html">Customers</a>
                     </li>
                     <li class="nav-item" id="itemBtn">
-                        <a class="nav-link" href="item.html">Items</a>
+                        <a class="nav-link active" href="#">Items</a>
                     </li>
                     <li class="nav-item" id="orderBtn">
-                        <a class="nav-link" href="orders.html">Orders</a>
+                        <a class="nav-link active" href="orders.html">PlaceOrder</a>
                     </li>
                     <li class="nav-item" id="orderDetailsBtn">
-                        <a class="nav-link" href="orderDetails.html">Order Details</a>
+                        <a class="nav-link active" href="orderDetails.html">OrderView</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!--Nav ended-->
 </header>
 
-<!-- Item Start-->
+<!--Item Management-->
 <main class="container-fluid" id=ItemSection>
-    <!-- Item Header Start -->
     <div class="container d-flex flex-grow-1 flex-column">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
-            <h2 id="H1-1" style="font-family: 'Arial Rounded MT Bold',serif"><i
-                    class="bi bi-boxes"></i> Item
-            </h2>
+            <h2 id="H1-1"><i class="bi bi-boxes"></i> Item Management</h2>
         </div>
     </div>
-    <!-- Item Header End -->
-
-    <!-- Item Header Section Start -->
-    <div class="container d-flex flex-grow-1 flex-column sectionBorder" style="background-color: #dfe4ea">
-        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
-            <h6 id="H6-1">Home > Item</h6>
-            <hr>
-        </div>
-        <!-- Item Header Section End -->
-
-        <!-- Item Details Section Start -->
+    <div class="container d-flex flex-grow-1 flex-column sectionBorder mb-5 mt-2" style="background-color: #f0f0f0">
         <div class="row justify-content-around" style="height: max-content">
-
-            <!-- Item Details Search Section Start -->
-            <div class="col-10 col-md-6 col-lg-5 p-0 mt-5 rounded-3 sectionBorder"
+            <!--Item Search-->
+            <div class="col-10 col-md-6 col-lg-5 p-0 mt-5 sectionBorder"
                  style="background-color: white; height: max-content">
-                <h4 class="text-center p-2 text-light rounded-3" style="background: dodgerblue">Manage Item</h4>
-
-                <div class="mb-3 ms-3 me-3 mt-3 ">
-                    <label class="fw-bold" for="txtSearchItemCode">Search Item :</label>
-                    <input class="form-control me-2 mt-2" id="txtSearchItemCode"
-                           placeholder="Input Name/Code/Tp Here"
-                           type="search">
-                </div>
-                <div class="m-4">
-                    <button class="btn btn-primary mt-2 m-1" id="btnAddItem" type="button">Add Item
-                    </button>
-
-                    <button class="btn btn-warning mt-2 m-1" id="btnUpdateItem" type="button">Update Item
-                    </button>
-
-                    <button class="btn btn-danger mt-2 m-1" id="btnDeleteItem" type="button">Delete Item
+                <div class="row mb-3 ms-3 me-3 mt-3">
+                    <label class="fw-bold" for="txtSearchItemCode">Search Item</label>
+                    <div class="input-group">
+                        <input class="form-control me-3 mt-2 rounded-2 w-50" id="txtSearchItemCode" type="search"
+                               placeholder="Input Item Code">
+                        <button class="btn btn-secondary mt-2 rounded-2 w-25" id="btnSearchItem" type="button">Search
+                        </button>
+                    </div>
+                    <button class="btn btn-success mt-3 ms-3 rounded-2 w-25" id="btnGetAllItems" type="button">Get All
                     </button>
                 </div>
             </div>
-            <!-- Item Details Search Section End -->
-            <!-- Item Details Search Section Start -->
-            <div class="col-10 col-md-5 col-lg-4 p-0 mt-2 rounded-3 sectionBorder" style="background-color: white">
-
+            <!--Item Form-->
+            <div class="col-10 col-md-5 col-lg-4 p-0 mt-5 mb-4 sectionBorder" style="background-color: white">
                 <form action="item" id="itemForm">
                     <div class="mb-3 ms-3 me-3 mt-3 ">
-                        <label class="fw-bold" for="txtItemCode">Item Code :</label>
+                        <label class="fw-bold" for="txtItemCode">Item Code</label>
                         <input class="form-control" id="txtItemCode" name="code" type="text">
                         <span class="control-error"></span>
                     </div>
-
                     <div class="mb-3 ms-3 me-3 mt-3 ">
-                        <label class="fw-bold" for="txtItemDescription">Item Name :</label>
+                        <label class="fw-bold" for="txtItemDescription">Item Description</label>
                         <input class="form-control " id="txtItemDescription" name="description" type="text">
                         <span class="control-error"></span>
                     </div>
-
                     <div class="mb-3 ms-3 me-3 mt-3 ">
-                        <label class="fw-bold" for="txtItemQuantity">Item Qty :</label>
+                        <label class="fw-bold" for="txtItemQuantity">Item Quantity</label>
                         <input class="form-control " id="txtItemQuantity" name="qty" type="text">
                         <span class="control-error"></span>
                     </div>
-
                     <div class="mb-3 ms-3 me-3 mt-3 ">
-                        <label class="fw-bold" for="txtItemUnitPrice">Item Price :</label>
+                        <label class="fw-bold" for="txtItemUnitPrice">Unit Price</label>
                         <input class="form-control " id="txtItemUnitPrice" name="unitPrice" type="text">
                         <span class="control-error"></span>
                     </div>
+                    <div class="m-4 text-center">
+                        <button class="btn btn-primary mt-2 m-2 w-25" id="btnAddItem" type="button">Add</button>
+                        <button class="btn btn-warning mt-2 m-2 w-25" id="btnUpdateItem" type="button">Update</button>
+                        <button class="btn btn-danger mt-2 m-2 w-25" id="btnDeleteItem" type="button">Delete</button>
+                        <button class="btn btn-secondary mt-2 m-2 w-25" id="btnClearAllItem" type="button">Clear All
+                        </button>
+                    </div>
                 </form>
             </div>
-            <!-- Item Details Search Section End -->
         </div>
-        <!-- Item Details Section End -->
-
-        <!-- View Item Details Table Start -->
-
-        <div class="row mt-1 mt-md-2 mt-lg-4 justify-content-around " style="height: 320px;">
-            <div class="col-11 justify-content-around sectionBorder" style="height: 290px; background: white">
-                <div class="ItemTableDiv overflow-auto" style="height: 270px;">
-                    <table class="table table-primary table-striped table-bordered table-hover">
-                        <thead class="text-light table-dark text-center  table-bordered sticky-top">
+        <div class="row mt-5 mb-5 mt-md-2 mt-lg-4 justify-content-around">
+            <!--Item Table-->
+            <div class="col-11 justify-content-around sectionBorder" style="background: white">
+                <div class="ItemTableDiv">
+                    <table class="table table-bordered table-hover table-cursor mt-3">
+                        <thead class="text-light table-dark text-center  table-bordered">
                         <tr>
-                            <th>Item Code</th>
-                            <th>Item Name</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
+                            <th class="w-25">Item Code</th>
+                            <th class="w-25">Item Description</th>
+                            <th class="w-25">Item Quantity</th>
+                            <th class="w-25">Unit Price</th>
                         </tr>
                         </thead>
                         <tbody id="itemTable"></tbody>
@@ -147,20 +124,14 @@
                 </div>
             </div>
         </div>
-        <!-- View Item Details Table End -->
     </div>
 </main>
-<!-- Item End-->
 
-<!--Import js for bootstrap-->
-<script src="../assets/styles/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
-
-<!--import jQuery library-->
-<script rel="script" src="../assets/styles/jQuery/jquery-3.6.1.min.js"></script>
-<script rel="script" src="../assets/styles/sweetalert2-11.6.16/sweetalert2.min.js"></script>
-<script rel="script" src="../util/alert.js"></script>
-<script rel="script" src="../util/validation.js"></script>
-
-<script rel="script" src="../controllers/ItemController.js"></script>
+<script src="../assets/Bootstrap/bootstrap-5.2.1/js/bootstrap.min.js"></script>
+<script src="../assets/jQuery/jquery-3.6.1.min.js"></script>
+<script src="../assets/styles/sweetalert-11.6.16/sweetalert.min.js"></script>
+<script src="../util/alert.js"></script>
+<script src="../util/validation.js"></script>
+<script src="../controllers/ItemController.js"></script>
 </body>
 </html>
