@@ -18,7 +18,7 @@ $("#btnDeleteItem").attr('disabled', true);
  * Item ID
  * */
 function generateItemID() {
-    $("#txtItemID").val("I00-001");
+    $("#txtItemCode").val("I00-001");
     $.ajax({
         url: baseUrl + "item/ItemIdGenerate",
         method: "GET",
@@ -29,11 +29,11 @@ function generateItemID() {
             let tempId = parseInt(code.split("-")[1]);
             tempId = tempId + 1;
             if (tempId <= 9) {
-                $("#txtItemID").val("I00-00" + tempId);
+                $("#txtItemCode").val("I00-00" + tempId);
             } else if (tempId <= 99) {
-                $("#txtItemID").val("I00-0" + tempId);
+                $("#txtItemCode").val("I00-0" + tempId);
             } else {
-                $("#txtItemID").val("I00-" + tempId);
+                $("#txtItemCode").val("I00-" + tempId);
             }
         },
         error: function (ob, statusText, error) {
@@ -66,11 +66,11 @@ $("#btnAddItem").click(function () {
  * clear input fields Values Method
  * */
 function setTextFieldValues(code, description, qty, price) {
-    $("#txtItemID").val(code);
-    $("#txtItemName").val(description);
-    $("#txtItemQty").val(qty);
-    $("#txtItemPrice").val(price);
-    $("#txtItemName").focus();
+    $("#txtItemCode").val(code);
+    $("#txtItemDescription").val(description);
+    $("#txtItemQuantity").val(qty);
+    $("#txtItemUnitPrice").val(price);
+    $("#txtItemDescription").focus();
     checkValidity(ItemsValidations);
     $("#btnAddItem").attr('disabled', true);
     $("#btnUpdateItem").attr('disabled', true);
@@ -121,10 +121,10 @@ function blindClickEvents() {
         let unitPrice = $(this).children().eq(3).text();
         console.log(code, description, qty, unitPrice);
 
-        $("#txtItemID").val(code);
-        $("#txtItemName").val(description);
-        $("#txtItemQty").val(qty);
-        $("#txtItemPrice").val(unitPrice);
+        $("#txtItemCode").val(code);
+        $("#txtItemDescription").val(description);
+        $("#txtItemQuantity").val(qty);
+        $("#txtItemUnitPrice").val(unitPrice);
     });
     $("#btnAddItem").attr('disabled', true);
 }
@@ -166,10 +166,10 @@ $("#txtSearchItemCode").on("keypress", function (event) {
  * */
 $("#btnUpdateItem").click(function () {
 
-    let code = $("#txtItemID").val();
-    let description = $("#txtItemName").val();
-    let qty = $("#txtItemQty").val();
-    let unitPrice = $("#txtItemPrice").val();
+    let code = $("#txtItemCode").val();
+    let description = $("#txtItemDescription").val();
+    let qty = $("#txtItemQuantity").val();
+    let unitPrice = $("#txtItemUnitPrice").val();
 
     var itemOb = {
         code: code,
@@ -204,10 +204,10 @@ $("#btnUpdateItem").click(function () {
  * */
 $("#btnDeleteItem").click(function () {
 
-    let itCode = $("#txtItemID").val();
-    let itDescription = $("#txtItemName").val();
-    let itQty = $("#txtItemQty").val();
-    let itUnitPrice = $("#txtItemPrice").val();
+    let itCode = $("#txtItemCode").val();
+    let itDescription = $("#txtItemDescription").val();
+    let itQty = $("#txtItemQuantity").val();
+    let itUnitPrice = $("#txtItemUnitPrice").val();
 
     const itemOb = {
         code: itCode,
@@ -235,7 +235,7 @@ $("#btnDeleteItem").click(function () {
 /**
  * Auto Forces Input Fields Save
  * */
-$("#txtItemID").focus();
+$("#txtItemCode").focus();
 const regExItemCode = /^(I00-)[0-9]{3,4}$/;
 const regExItemName = /^[A-z ]{3,20}$/;
 const regExItemPrice = /^[0-9]{1,10}$/;
@@ -244,62 +244,62 @@ const regExItemQtyOnHand = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 let ItemsValidations = [];
 ItemsValidations.push({
     reg: regExItemCode,
-    field: $('#txtItemID'),
+    field: $('#txtItemCode'),
     error: 'Item ID Pattern is Wrong : I00-001'
 });
 ItemsValidations.push({
     reg: regExItemName,
-    field: $('#txtItemName'),
+    field: $('#txtItemDescription'),
     error: 'Item Name Pattern is Wrong : A-z 3-20'
 });
 ItemsValidations.push({
     reg: regExItemPrice,
-    field: $('#txtItemQty'),
+    field: $('#txtItemQuantity'),
     error: 'Item Qty Pattern is Wrong : 0-9 1-10'
 });
 ItemsValidations.push({
     reg: regExItemQtyOnHand,
-    field: $('#txtItemPrice'),
+    field: $('#txtItemUnitPrice'),
     error: 'Item Salary Pattern is Wrong : 100 or 100.00'
 });
 
 //disable tab key of all four text fields using grouping selector in CSS
-$("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('keydown', function (event) {
+$("#txtItemCode,#txtItemDescription,#txtItemQuantity,#txtItemUnitPrice").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
     }
 });
 
-$("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('keyup', function (event) {
+$("#txtItemCode,#txtItemDescription,#txtItemQuantity,#txtItemUnitPrice").on('keyup', function (event) {
     checkValidity(ItemsValidations);
 });
 
-$("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('blur', function (event) {
+$("#txtItemCode,#txtItemDescription,#txtItemQuantity,#txtItemUnitPrice").on('blur', function (event) {
     checkValidity(ItemsValidations);
 });
 
-$("#txtItemID").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExItemCode, $("#txtItemID"))) {
-        $("#txtItemName").focus();
+$("#txtItemCode").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExItemCode, $("#txtItemCode"))) {
+        $("#txtItemDescription").focus();
     } else {
-        focusText($("#txtItemID"));
+        focusText($("#txtItemCode"));
     }
 });
 
-$("#txtItemName").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExItemName, $("#txtItemName"))) {
-        focusText($("#txtItemQty"));
+$("#txtItemDescription").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExItemName, $("#txtItemDescription"))) {
+        focusText($("#txtItemQuantity"));
     }
 });
 
-$("#txtItemQty").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExItemPrice, $("#txtItemQty"))) {
-        focusText($("#txtItemPrice"));
+$("#txtItemQuantity").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExItemPrice, $("#txtItemQuantity"))) {
+        focusText($("#txtItemUnitPrice"));
     }
 });
 
-$("#txtItemPrice").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExItemQtyOnHand, $("#txtItemPrice"))) {
+$("#txtItemUnitPrice").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExItemQtyOnHand, $("#txtItemUnitPrice"))) {
         if (event.which === 13) {
             $('#btnAddItem').focus();
         }
