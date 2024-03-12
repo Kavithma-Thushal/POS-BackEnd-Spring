@@ -82,7 +82,7 @@ function setTextFieldValues(code, description, qty, price) {
  * load all Item Method
  * */
 function loadAllItems() {
-    $("#ItemTable").empty();
+    $("#itemTable").empty();
     $.ajax({
         url: baseUrl + "item/loadAllItem",
         method: "GET",
@@ -96,7 +96,7 @@ function loadAllItems() {
                 let unitPrice = i.unitPrice;
 
                 let row = "<tr><td>" + code + "</td><td>" + description + "</td><td>" + qty + "</td><td>" + unitPrice + "</td></tr>";
-                $("#ItemTable").append(row);
+                $("#itemTable").append(row);
             }
             blindClickEvents();
             generateItemID();
@@ -114,7 +114,7 @@ function loadAllItems() {
  * Table Listener Click and Load textFields
  * */
 function blindClickEvents() {
-    $("#ItemTable>tr").on("click", function () {
+    $("#itemTable>tr").on("click", function () {
         let code = $(this).children().eq(0).text();
         let description = $(this).children().eq(1).text();
         let qty = $(this).children().eq(2).text();
@@ -133,10 +133,10 @@ function blindClickEvents() {
 /**
  * Search id and Load Table
  * */
-$("#ItemIdSearch").on("keypress", function (event) {
+$("#txtSearchItemCode").on("keypress", function (event) {
     if (event.which === 13) {
-        var search = $("#ItemIdSearch").val();
-        $("#ItemTable").empty();
+        var search = $("#txtSearchItemCode").val();
+        $("#itemTable").empty();
         $.ajax({
             url: baseUrl + "item/searchItemCode/?code=" + search,
             method: "GET",
@@ -145,7 +145,7 @@ $("#ItemIdSearch").on("keypress", function (event) {
             success: function (res) {
                 console.log(res);
                 let row = "<tr><td>" + res.code + "</td><td>" + res.description + "</td><td>" + res.qty + "</td><td>" + res.unitPrice + "</td></tr>";
-                $("#ItemTable").append(row);
+                $("#itemTable").append(row);
                 blindClickEvents();
             },
             error: function (error) {
