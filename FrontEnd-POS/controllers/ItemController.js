@@ -278,31 +278,27 @@ $("#txtItemCode,#txtItemDescription,#txtItemQuantity,#txtItemUnitPrice").on('blu
     checkValidity(ItemsValidations);
 });
 
+/**
+ * Enable ENTER-KEY
+ **/
 $("#txtItemCode").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemCode, $("#txtItemCode"))) {
         $("#txtItemDescription").focus();
-    } else {
-        focusText($("#txtItemCode"));
     }
 });
-
 $("#txtItemDescription").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemName, $("#txtItemDescription"))) {
-        focusText($("#txtItemQuantity"));
+        $("#txtItemQuantity").focus();
     }
 });
-
 $("#txtItemQuantity").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemPrice, $("#txtItemQuantity"))) {
-        focusText($("#txtItemUnitPrice"));
+        $("#txtItemUnitPrice").focus();
     }
 });
-
 $("#txtItemUnitPrice").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemQtyOnHand, $("#txtItemUnitPrice"))) {
-        if (event.which === 13) {
-            $('#btnAddItem').focus();
-        }
+        $("#btnAddItem").focus();
     }
 });
 
