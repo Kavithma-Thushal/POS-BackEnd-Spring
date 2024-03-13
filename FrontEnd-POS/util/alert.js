@@ -3,7 +3,7 @@
  * @project : Spring-POS
  **/
 
-function saveUpdateAlert(vale, value2) {
+function successAlert(vale, value2) {
     Swal.fire({
         position: 'bottom-end',
         icon: 'success',
@@ -13,7 +13,7 @@ function saveUpdateAlert(vale, value2) {
     });
 }
 
-function unSuccessUpdateAlert(vale, vale2) {
+function errorAlert(vale, vale2) {
     Swal.fire({
         position: 'bottom-end',
         icon: 'error',

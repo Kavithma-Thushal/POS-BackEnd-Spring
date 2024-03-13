@@ -4,19 +4,97 @@
  **/
 
 let baseUrl = "http://localhost:8080/spring_pos/";
-loadAllCustomer();
+
+loadAllCustomers();
+
 /**
- * Customer Save
- * */
+ * Save Customer Button
+ **/
+$("#btnSaveCustomer").click(function () {
+    let formData = $("#customerForm").serialize();
+    $.ajax({
+        url: baseUrl + "customer",
+        method: "POST",
+        data: formData,
+        dataType: "json",
+        success: function (resp) {
+            successAlert("Customer", resp.message);
+            loadAllCustomers();
+        },
+        error: function (error) {
+            errorAlert("Customer", JSON.parse(error.responseText).message);
+        }
+    });
+});
+
+/**
+ * Update Customer Button
+ **/
+$("#btnUpdateCustomer").click(function () {
+    let cusId = $("#txtCusId").val();
+    let cusName = $("#txtCusName").val();
+    let cusAddress = $("#txtCusAddress").val();
+    let cusSalary = $("#txtCusSalary").val();
+
+    let customerObj = {
+        id: cusId,
+        name: cusName,
+        address: cusAddress,
+        salary: cusSalary
+    };
+
+    $.ajax({
+        url: baseUrl + "customer",
+        method: "PUT",
+        contentType: "application/json",        // Specify content type of the request body
+        data: JSON.stringify(customerObj),      // This is the actual request
+        dataType: 'json',                       // Specify server is expecting json data
+        success: function (resp) {
+            successAlert("Customer", resp.message);
+            loadAllCustomers();
+        },
+        error: function (error) {
+            errorAlert("Customer", JSON.parse(error.responseText).message);
+        }
+    });
+});
+
+/**
+ * Delete Customer Button
+ **/
+$("#btnDeleteCustomer").click(function () {
+    let cusId = $("#txtCusId").val();
+    let cusName = $("#txtCusName").val();
+    let cusAddress = $("#txtCusAddress").val();
+    let cusSalary = $("#txtCusSalary").val();
+
+    const customerObj = {
+        id: cusId,
+        name: cusName,
+        address: cusAddress,
+        salary: cusSalary
+    };
+
+    $.ajax({
+        url: baseUrl + "customer",
+        method: "DELETE",
+        contentType: "application/json",
+        data: JSON.stringify(customerObj),
+        dataType: 'json',
+        success: function (resp) {
+            successAlert("Customer", resp.message);
+            loadAllCustomers();
+        },
+        error: function (error) {
+            errorAlert("Customer", JSON.parse(error.responseText).message);
+        }
+    });
+});
 
 $("#btnSaveCustomer").attr('disabled', true);
 $("#btnUpdateCustomer").attr('disabled', true);
 $("#btnDeleteCustomer").attr('disabled', true);
 
-/**
- * Customer Save
- * Customer ID
- * */
 function generateCustomerID() {
     $("#txtCusId").val("C00-001");
     $.ajax({
@@ -43,27 +121,6 @@ function generateCustomerID() {
     });
 }
 
-/**
- * Button Add New Customer
- * */
-
-$("#btnSaveCustomer").click(function () {
-    let formData = $("#customerForm").serialize();
-    console.log(formData);
-    $.ajax({
-        url: baseUrl + "customer", method: "post", data: formData, dataType: "json", success: function (res) {
-            saveUpdateAlert("Customer", res.message);
-            loadAllCustomer();
-        }, error: function (error) {
-            unSuccessUpdateAlert("Customer", JSON.parse(error.responseText).message);
-        }
-    });
-});
-
-
-/**
- * clear input fields Values Method
- * */
 function setTextFieldValues(id, name, address, salary) {
     $("#txtCusId").val(id);
     $("#txtCusName").val(name);
@@ -76,10 +133,7 @@ function setTextFieldValues(id, name, address, salary) {
     $("#btnDeleteCustomer").attr('disabled', true);
 }
 
-/**
- * load all customers Method
- * */
-function loadAllCustomer() {
+function loadAllCustomers() {
     $("#customerTable").empty();
     $.ajax({
         url: baseUrl + "customer/loadAllCustomer",
@@ -107,9 +161,6 @@ function loadAllCustomer() {
     });
 }
 
-/**
- * Table Listener Click and Load textFields
- * */
 function blindClickEvents() {
     $("#customerTable>tr").on("click", function () {
         let id = $(this).children().eq(0).text();
@@ -126,10 +177,6 @@ function blindClickEvents() {
     $("#btnSaveCustomer").attr('disabled', true);
 }
 
-
-/**
- * Search id and Load Table
- * */
 $("#txtSearchCusId").on("keypress", function (event) {
     if (event.which === 13) {
         var search = $("#txtSearchCusId").val();
@@ -146,7 +193,7 @@ $("#txtSearchCusId").on("keypress", function (event) {
                 blindClickEvents();
             },
             error: function (error) {
-                loadAllCustomer();
+                loadAllCustomers();
                 let message = JSON.parse(error.responseText).message;
                 emptyMassage(message);
             }
@@ -155,77 +202,6 @@ $("#txtSearchCusId").on("keypress", function (event) {
 
 });
 
-/**
- * Customer Update
- * */
-
-/**
- * Update Action
- * */
-$("#btnUpdateCustomer").click(function () {
-
-    let cusId = $("#txtCusId").val();
-    let cusName = $("#txtCusName").val();
-    let cusAddress = $("#txtCusAddress").val();
-    let cusSalary = $("#txtCusSalary").val();
-
-    const customerOb = {
-        id: cusId, name: cusName, address: cusAddress, salary: cusSalary
-    };
-
-    $.ajax({
-        url: baseUrl + "customer",
-        method: "put",
-        contentType: "application/json",
-        data: JSON.stringify(customerOb),
-        success: function (res) {
-            saveUpdateAlert("Customer", res.message);
-            loadAllCustomer();
-        },
-        error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            unSuccessUpdateAlert("Customer", message);
-        }
-    });
-});
-
-/**
- * Customer Delete
- * */
-
-/**
- * Delete Action
- * */
-$("#btnDeleteCustomer").click(function () {
-
-    let cusId = $("#txtCusId").val();
-    let cusName = $("#txtCusName").val();
-    let cusAddress = $("#txtCusAddress").val();
-    let cusSalary = $("#txtCusSalary").val();
-
-    const customerOb = {
-        id: cusId, name: cusName, address: cusAddress, salary: cusSalary
-    };
-
-    $.ajax({
-        url: baseUrl + "customer",
-        method: "delete",
-        contentType: "application/json",
-        data: JSON.stringify(customerOb),
-        success: function (res) {
-            saveUpdateAlert("Customer", res.message);
-            loadAllCustomer();
-        },
-        error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            unSuccessUpdateAlert("Customer", message);
-        }
-    });
-});
-
-/**
- * Auto Forces Input Fields Save
- * */
 $("#txtCusId").focus();
 const regExCusID = /^(C00-)[0-9]{3,4}$/;
 const regExCusName = /^[A-z ]{3,20}$/;
