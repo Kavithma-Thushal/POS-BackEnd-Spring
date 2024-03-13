@@ -151,7 +151,7 @@ $("#txtSearchItemCode").on("keypress", function (event) {
             error: function (error) {
                 loadAllItems();
                 let message = JSON.parse(error.responseText).message;
-                emptyMassage(message);
+                emptyMessage(message);
             }
         })
     }
