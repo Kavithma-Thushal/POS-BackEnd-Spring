@@ -1,7 +1,6 @@
 /**
  * @author : Kavithma Thushal
  * @project : Spring-POS
- * @since : 6:56 PM - 1/15/2024
  **/
 
 let baseUrl = "http://localhost:8080/spring_pos/";
