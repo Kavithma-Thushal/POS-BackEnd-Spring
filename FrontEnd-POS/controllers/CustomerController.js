@@ -240,14 +240,14 @@ function clearInputFields() {
 /**
  * Customer Validations
  **/
-const regExCusID = /^(C00-)[0-9]{3}$/;
+const regExCusId = /^(C00-)[0-9]{3}$/;
 const regExCusName = /^[A-z ]{3,20}$/;
 const regExCusAddress = /^[A-Za-z0-9/, -]{4,30}$/;
-const regExSalary = /^[0-9]{1,}[.]?[0-9]{2}$/;
+const regExCusSalary = /^[0-9]{1,}[.]?[0-9]{2}$/;
 
 let customerValidations = [];
 customerValidations.push({
-    reg: regExCusID,
+    reg: regExCusId,
     field: $('#txtCusId'),
     error: 'Customer id must match the pattern C00-001'
 });
@@ -262,7 +262,7 @@ customerValidations.push({
     error: 'Customer address must be between 4-30 characters'
 });
 customerValidations.push({
-    reg: regExSalary,
+    reg: regExCusSalary,
     field: $('#txtCusSalary'),
     error: 'Customer salary  must have 3 digits with 2 decimal places'
 });
@@ -287,7 +287,7 @@ $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (
  * Enable ENTER-KEY
  **/
 $("#txtCusId").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExCusID, $("#txtCusId"))) {
+    if (event.key === "Enter" && check(regExCusId, $("#txtCusId"))) {
         $("#txtCusName").focus();
     }
 });
@@ -302,7 +302,7 @@ $("#txtCusAddress").on('keydown', function (event) {
     }
 });
 $("#txtCusSalary").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExSalary, $("#txtCusSalary"))) {
+    if (event.key === "Enter" && check(regExCusSalary, $("#txtCusSalary"))) {
         $("#btnSaveCustomer").focus();
     }
 });
