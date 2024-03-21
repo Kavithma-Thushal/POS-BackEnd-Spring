@@ -35,10 +35,10 @@ public class CustomerController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @DeleteMapping("/{customerId}")
-    public ResponseUtil deleteCustomer(@PathVariable("customerId") String id) {
-        service.deleteCustomer(id);
-        return new ResponseUtil("OK", "Successfully Deleted. :" + id, null);
+    @DeleteMapping
+    public ResponseUtil deleteCustomer(@RequestBody CustomerDTO dto) {
+        service.deleteCustomer(dto);
+        return new ResponseUtil("OK", "Successfully Deleted. :" + dto.getId(), null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)

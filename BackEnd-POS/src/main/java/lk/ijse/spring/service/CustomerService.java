@@ -18,7 +18,7 @@ public interface CustomerService {
 
     void updateCustomer(@RequestBody CustomerDTO dto);
 
-    void deleteCustomer(@PathVariable("customerId") String id);
+    void deleteCustomer(@RequestBody CustomerDTO dto);
 
     CustomerDTO searchCusId(String id);
 

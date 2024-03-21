@@ -42,11 +42,11 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void deleteCustomer(String id) {
-        if (!repo.existsById(id)) {
+    public void deleteCustomer(CustomerDTO dto) {
+        if (!repo.existsById(dto.getId())) {
             throw new RuntimeException("Wrong ID. Please enter Valid id..!");
         }
-        repo.deleteById(id);
+        repo.delete(mapper.map(dto, Customer.class));
     }
 
     @Override
