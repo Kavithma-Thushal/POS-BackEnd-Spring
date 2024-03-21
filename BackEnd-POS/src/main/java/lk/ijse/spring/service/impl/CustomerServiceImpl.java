@@ -20,6 +20,7 @@ import java.util.ArrayList;
 @Service
 @Transactional
 public class CustomerServiceImpl implements CustomerService {
+
     @Autowired
     private CustomerRepo repo;
     @Autowired
@@ -28,7 +29,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void saveCustomer(CustomerDTO dto) {
         if (repo.existsById(dto.getId())) {
-            throw new RuntimeException("Customer Already Exist. Please enter another id..!");
+            throw new RuntimeException("Customer already exist...! Please enter another id");
         }
         repo.save(mapper.map(dto, Customer.class));
     }
@@ -36,7 +37,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void updateCustomer(CustomerDTO dto) {
         if (!repo.existsById(dto.getId())) {
-            throw new RuntimeException("Customer Not Exist. Please enter Valid id..!");
+            throw new RuntimeException("Customer not exist...! Please enter valid id");
         }
         repo.save(mapper.map(dto, Customer.class));
     }
@@ -44,7 +45,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void deleteCustomer(String id) {
         if (!repo.existsById(id)) {
-            throw new RuntimeException("Wrong ID. Please enter Valid id..!");
+            throw new RuntimeException("Wrong ID...! Please enter valid id");
         }
         repo.deleteById(id);
     }

@@ -14,6 +14,7 @@ import java.util.ArrayList;
  * @project : Spring-POS
  **/
 public interface CustomerService {
+
     void saveCustomer(@RequestBody CustomerDTO dto);
 
     void updateCustomer(@RequestBody CustomerDTO dto);

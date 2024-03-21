@@ -31,14 +31,14 @@ public class CustomerController {
     @PutMapping
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto) {
         service.updateCustomer(dto);
-        return new ResponseUtil("200 OK", "updated successfully...! : " + dto.getId(), null);
+        return new ResponseUtil("200 OK", "updated successfully...!", null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
     @DeleteMapping("/{id}")
     public ResponseUtil deleteCustomer(@PathVariable("id") String id) {
         service.deleteCustomer(id);
-        return new ResponseUtil("200 OK", "deleted successfully...! : " + id, null);
+        return new ResponseUtil("200 OK", "deleted successfully...!", null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
