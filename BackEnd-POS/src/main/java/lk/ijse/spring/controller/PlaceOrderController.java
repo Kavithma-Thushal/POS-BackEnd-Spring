@@ -24,20 +24,20 @@ public class PlaceOrderController {
     @PostMapping
     public ResponseUtil placeOrder(@RequestBody OrdersDTO dto) {
         service.placeOrder(dto);
-        return new ResponseUtil("Ok", "Successfully Purchased.!", null);
+        return new ResponseUtil("200 OK", "purchased successfully...!", null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
     @GetMapping(path = "/LoadOrders")
     public ResponseUtil LoadOrders() {
-        return new ResponseUtil("OK", "Successfully Loaded. :", service.LoadOrders());
+        return new ResponseUtil("200 OK", "loaded successfully...! : ", service.LoadOrders());
     }
 
 
     @ResponseStatus(HttpStatus.CREATED)
     @GetMapping(path = "/LoadOrderDetails")
     public ResponseUtil LoadOrderDetails() {
-        return new ResponseUtil("OK", "Successfully Loaded. :", service.LoadOrderDetails());
+        return new ResponseUtil("200 OK", "loaded successfully...! : ", service.LoadOrderDetails());
     }
 
     @ResponseStatus(HttpStatus.CREATED)

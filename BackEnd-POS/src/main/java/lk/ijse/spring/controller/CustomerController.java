@@ -24,21 +24,21 @@ public class CustomerController {
     @PostMapping
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO dto) {
         service.saveCustomer(dto);
-        return new ResponseUtil("OK", "Successfully Registered.!", null);
+        return new ResponseUtil("200 OK", "saved successfully...!", null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
     @PutMapping
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto) {
         service.updateCustomer(dto);
-        return new ResponseUtil("OK", "Successfully Updated. :" + dto.getId(), null);
+        return new ResponseUtil("200 OK", "updated successfully...! : " + dto.getId(), null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
     @DeleteMapping
     public ResponseUtil deleteCustomer(@RequestBody CustomerDTO dto) {
         service.deleteCustomer(dto);
-        return new ResponseUtil("OK", "Successfully Deleted. :" + dto.getId(), null);
+        return new ResponseUtil("200 OK", "deleted successfully...! : " + dto.getId(), null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
@@ -50,7 +50,7 @@ public class CustomerController {
     @ResponseStatus(HttpStatus.CREATED)
     @GetMapping(path = "/loadAllCustomer")
     public ResponseUtil loadAllCustomer() {
-        return new ResponseUtil("OK", "Successfully Loaded. :", service.loadAllCustomer());
+        return new ResponseUtil("200 OK", "loaded successfully...! : ", service.loadAllCustomer());
     }
 
     @ResponseStatus(HttpStatus.CREATED)
