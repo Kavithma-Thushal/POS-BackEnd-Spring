@@ -10,8 +10,5 @@
         <module name="BackEnd-POS" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="POS_Back_End" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
