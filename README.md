@@ -16,7 +16,7 @@ facilitated by Spring Security.
 This architecture enables businesses to deploy a reliable and flexible POS solution that can adapt to the evolving needs
 of the retail or hospitality industry while benefiting from the productivity and community support inherent in the
 Spring ecosystem. Additionally, Spring Boot can be leveraged to simplify the setup and configuration of the application,
-facilitating rapid development and deployment.
+facilitating rapid development and deployment
 
 ### FrontEnd
 
