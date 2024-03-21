@@ -22,7 +22,7 @@ public class CustomerController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO dto) {
+    public ResponseUtil saveCustomer(@RequestBody CustomerDTO dto) {
         service.saveCustomer(dto);
         return new ResponseUtil("200 OK", "saved successfully...!", null);
     }
