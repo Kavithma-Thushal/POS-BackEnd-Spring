@@ -42,8 +42,8 @@ public class CustomerController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/searchCusId", params = {"id"})
-    public CustomerDTO searchCusId(String id) {
+    @GetMapping("/searchCustomer/{id}")
+    public CustomerDTO searchCustomer(@PathVariable("id") String id) {
         return service.searchCusId(id);
     }
 
