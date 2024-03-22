@@ -54,7 +54,7 @@ public class CustomerController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/CustomerIdGenerate")
+    @GetMapping(path = "/generateCustomerId")
     public @ResponseBody CustomDTO customerIdGenerate() {
         return service.customerIdGenerate();
     }
