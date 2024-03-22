@@ -48,7 +48,7 @@ public class CustomerController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/loadAllCustomer")
+    @GetMapping(path = "/loadAllCustomers")
     public ResponseUtil loadAllCustomer() {
         return new ResponseUtil("200 OK", "loaded successfully...! : ", service.loadAllCustomer());
     }
