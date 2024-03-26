@@ -60,7 +60,7 @@ public class CustomerController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/CustomerCount")
+    @GetMapping(path = "/customerCount")
     public @ResponseBody CustomDTO getSumCustomer() {
         return service.getSumCustomer();
     }

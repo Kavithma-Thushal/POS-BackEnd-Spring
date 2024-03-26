@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8f99b49-0734-4de6-920d-6c3771121134" name="Changes" comment="Customer Update Refactored">
+    <list default="true" id="e8f99b49-0734-4de6-920d-6c3771121134" name="Changes" comment="generateCustomer Added">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/spring/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/spring/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/impl/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/impl/CustomerServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.831" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.831" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.831" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -200,7 +199,15 @@
       <workItem from="1711024264938" duration="2435000" />
       <workItem from="1711026766905" duration="538000" />
       <workItem from="1711081176261" duration="4520000" />
-      <workItem from="1711088585203" duration="1196000" />
+      <workItem from="1711088585203" duration="3201000" />
+      <workItem from="1711095326090" duration="912000" />
+      <workItem from="1711103073149" duration="773000" />
+      <workItem from="1711281943845" duration="1198000" />
+      <workItem from="1711283204177" duration="8000" />
+      <workItem from="1711286001284" duration="2287000" />
+      <workItem from="1711457945341" duration="3501000" />
+      <workItem from="1711462346958" duration="4000" />
+      <workItem from="1711470035349" duration="960000" />
     </task>
     <task id="LOCAL-00001" summary="Project Refactored">
       <option name="closed" value="true" />
@@ -258,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711082977172</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="generateCustomer Added">
+      <option name="closed" value="true" />
+      <created>1711094801387</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711094801387</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +287,7 @@
     <MESSAGE value="Refactored" />
     <MESSAGE value="Search Customer Refactored" />
     <MESSAGE value="Customer Update Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Update Refactored" />
+    <MESSAGE value="generateCustomer Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="generateCustomer Added" />
   </component>
 </project>
