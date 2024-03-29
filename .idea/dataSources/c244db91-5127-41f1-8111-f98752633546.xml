@@ -975,7 +975,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="287" parent="1" name="spring_pos">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-03-21.07:44:14</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-03-27.09:10:10</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="288" parent="1" name="mysql.infoschema">
