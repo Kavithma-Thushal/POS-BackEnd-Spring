@@ -28,6 +28,12 @@ public class ItemController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/searchItemCode", params = {"code"})
+    public ItemDTO searchItemCode(String code) {
+        return service.searchItemCode(code);
+    }
+
+    @ResponseStatus(HttpStatus.CREATED)
     @PutMapping
     public ResponseUtil updateItem(@RequestBody ItemDTO dto) {
         service.updateItem(dto);
@@ -39,12 +45,6 @@ public class ItemController {
     public ResponseUtil deleteItem(@RequestBody ItemDTO dto) {
         service.deleteItem(dto);
         return new ResponseUtil("200 OK", "deleted successfully...! : " + dto.getCode(), null);
-    }
-
-    @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/searchItemCode", params = {"code"})
-    public ItemDTO searchItemCode(String code) {
-        return service.searchItemCode(code);
     }
 
     @ResponseStatus(HttpStatus.CREATED)

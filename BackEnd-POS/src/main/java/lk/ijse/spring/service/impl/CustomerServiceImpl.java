@@ -35,6 +35,14 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public CustomerDTO searchCusId(String id) {
+        if (!repo.existsById(id)) {
+            throw new RuntimeException("Wrong ID. Please Enter Valid ID");
+        }
+        return mapper.map(repo.findById(id).get(), CustomerDTO.class);
+    }
+
+    @Override
     public void updateCustomer(CustomerDTO dto) {
         if (!repo.existsById(dto.getId())) {
             throw new RuntimeException("Customer Not Exist...! Please Enter Valid ID");
@@ -48,14 +56,6 @@ public class CustomerServiceImpl implements CustomerService {
             throw new RuntimeException("Wrong ID...! Please Enter Valid ID");
         }
         repo.deleteById(id);
-    }
-
-    @Override
-    public CustomerDTO searchCusId(String id) {
-        if (!repo.existsById(id)) {
-            throw new RuntimeException("Wrong ID. Please Enter Valid ID");
-        }
-        return mapper.map(repo.findById(id).get(), CustomerDTO.class);
     }
 
     @Override

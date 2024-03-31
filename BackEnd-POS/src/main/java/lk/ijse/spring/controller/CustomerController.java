@@ -28,6 +28,12 @@ public class CustomerController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping("/searchCustomer/{id}")
+    public CustomerDTO searchCustomer(@PathVariable("id") String id) {
+        return service.searchCusId(id);
+    }
+
+    @ResponseStatus(HttpStatus.CREATED)
     @PutMapping
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto) {
         service.updateCustomer(dto);
@@ -39,12 +45,6 @@ public class CustomerController {
     public ResponseUtil deleteCustomer(@PathVariable("id") String id) {
         service.deleteCustomer(id);
         return new ResponseUtil("200 OK", "deleted successfully...!", null);
-    }
-
-    @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping("/searchCustomer/{id}")
-    public CustomerDTO searchCustomer(@PathVariable("id") String id) {
-        return service.searchCusId(id);
     }
 
     @ResponseStatus(HttpStatus.CREATED)

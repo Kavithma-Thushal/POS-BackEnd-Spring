@@ -17,11 +17,11 @@ public interface CustomerService {
 
     void saveCustomer(@RequestBody CustomerDTO dto);
 
+    CustomerDTO searchCusId(String id);
+
     void updateCustomer(@RequestBody CustomerDTO dto);
 
     void deleteCustomer(@PathVariable("id") String id);
-
-    CustomerDTO searchCusId(String id);
 
     ArrayList<CustomerDTO> loadAllCustomer();
 

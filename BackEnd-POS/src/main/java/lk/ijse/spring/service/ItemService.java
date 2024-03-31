@@ -15,11 +15,11 @@ import java.util.ArrayList;
 public interface ItemService {
     void saveItem(@ModelAttribute ItemDTO dto);
 
+    ItemDTO searchItemCode(String code);
+
     void updateItem(@RequestBody ItemDTO dto);
 
     void deleteItem(@RequestBody ItemDTO dto);
-
-    ItemDTO searchItemCode(String code);
 
     ArrayList<ItemDTO> loadAllItem();
 

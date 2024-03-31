@@ -35,6 +35,15 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
+    public ItemDTO searchItemCode(String code) {
+        if (!repo.existsById(code)) {
+            throw new RuntimeException("Wrong ID. Please enter Valid id..!");
+        }
+        Item item = repo.findById(code).get();
+        return mapper.map(item, ItemDTO.class);
+    }
+
+    @Override
     public void updateItem(ItemDTO dto) {
         if (!repo.existsById(dto.getCode())) {
             throw new RuntimeException("Item Not Exist. Please enter Valid id..!");
@@ -48,15 +57,6 @@ public class ItemServiceImpl implements ItemService {
             throw new RuntimeException("Wrong ID..Please enter valid id..!");
         }
         repo.delete(mapper.map(dto, Item.class));
-    }
-
-    @Override
-    public ItemDTO searchItemCode(String code) {
-        if (!repo.existsById(code)) {
-            throw new RuntimeException("Wrong ID. Please enter Valid id..!");
-        }
-        Item item = repo.findById(code).get();
-        return mapper.map(item, ItemDTO.class);
     }
 
     @Override
