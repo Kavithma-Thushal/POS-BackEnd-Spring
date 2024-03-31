@@ -20,6 +20,7 @@ import java.util.ArrayList;
 @Service
 @Transactional
 public class ItemServiceImpl implements ItemService {
+
     @Autowired
     private ItemRepo repo;
 
@@ -29,7 +30,7 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public void saveItem(ItemDTO dto) {
         if (repo.existsById(dto.getCode())) {
-            throw new RuntimeException("Item Already Exist. Please enter another id..!");
+            throw new RuntimeException("Item Already Exist...! Please Enter Another Code");
         }
         repo.save(mapper.map(dto, Item.class));
     }
@@ -37,26 +38,25 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public ItemDTO searchItemCode(String code) {
         if (!repo.existsById(code)) {
-            throw new RuntimeException("Wrong ID. Please enter Valid id..!");
+            throw new RuntimeException("Wrong Code. Please Enter Valid Code");
         }
-        Item item = repo.findById(code).get();
-        return mapper.map(item, ItemDTO.class);
+        return mapper.map(repo.findById(code).get(), ItemDTO.class);
     }
 
     @Override
     public void updateItem(ItemDTO dto) {
         if (!repo.existsById(dto.getCode())) {
-            throw new RuntimeException("Item Not Exist. Please enter Valid id..!");
+            throw new RuntimeException("Item Not Exist...! Please Enter Valid Code");
         }
         repo.save(mapper.map(dto, Item.class));
     }
 
     @Override
-    public void deleteItem(ItemDTO dto) {
-        if (!repo.existsById(dto.getCode())) {
-            throw new RuntimeException("Wrong ID..Please enter valid id..!");
+    public void deleteItem(String code) {
+        if (!repo.existsById(code)) {
+            throw new RuntimeException("Wrong Code...! Please Enter Valid Code");
         }
-        repo.delete(mapper.map(dto, Item.class));
+        repo.deleteById(code);
     }
 
     @Override

@@ -22,14 +22,14 @@ public class ItemController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public ResponseUtil saveItem(@ModelAttribute ItemDTO dto) {
+    public ResponseUtil saveItem(@RequestBody ItemDTO dto) {
         service.saveItem(dto);
         return new ResponseUtil("200 OK", "saved successfully...!", null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/searchItemCode", params = {"code"})
-    public ItemDTO searchItemCode(String code) {
+    @GetMapping("/searchItem/{code}")
+    public ItemDTO searchItem(@PathVariable("code") String code) {
         return service.searchItemCode(code);
     }
 
@@ -37,24 +37,24 @@ public class ItemController {
     @PutMapping
     public ResponseUtil updateItem(@RequestBody ItemDTO dto) {
         service.updateItem(dto);
-        return new ResponseUtil("200 OK", "updated successfully...! : " + dto.getCode(), null);
+        return new ResponseUtil("200 OK", "updated successfully...!", null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @DeleteMapping
-    public ResponseUtil deleteItem(@RequestBody ItemDTO dto) {
-        service.deleteItem(dto);
-        return new ResponseUtil("200 OK", "deleted successfully...! : " + dto.getCode(), null);
+    @DeleteMapping("/{code}")
+    public ResponseUtil deleteItem(@PathVariable("code") String code) {
+        service.deleteItem(code);
+        return new ResponseUtil("200 OK", "deleted successfully...!", null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/loadAllItem")
+    @GetMapping(path = "/loadAllItems")
     public ResponseUtil loadAllItem() {
         return new ResponseUtil("200 OK", "loaded successfully...! : ", service.loadAllItem());
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/ItemIdGenerate")
+    @GetMapping(path = "/generateItemCode")
     public @ResponseBody CustomDTO ItemIdGenerate() {
         return service.itemIdGenerate();
     }
