@@ -21,6 +21,12 @@ public class PlaceOrderController {
     private PlaceOrderService service;
 
     @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/generateOrderId")
+    public @ResponseBody CustomDTO OrderIdGenerate() {
+        return service.OrderIdGenerate();
+    }
+
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public ResponseUtil placeOrder(@RequestBody OrdersDTO dto) {
         service.placeOrder(dto);
@@ -38,12 +44,6 @@ public class PlaceOrderController {
     @GetMapping(path = "/LoadOrderDetails")
     public ResponseUtil LoadOrderDetails() {
         return new ResponseUtil("200 OK", "loaded successfully...! : ", service.LoadOrderDetails());
-    }
-
-    @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/OrderIdGenerate")
-    public @ResponseBody CustomDTO OrderIdGenerate() {
-        return service.OrderIdGenerate();
     }
 
     @ResponseStatus(HttpStatus.CREATED)

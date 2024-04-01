@@ -9,116 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8f99b49-0734-4de6-920d-6c3771121134" name="Changes" comment="Manage Items Successfully">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c244db91-5127-41f1-8111-f98752633546.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c244db91-5127-41f1-8111-f98752633546.xml" afterDir="false" />
+    <list default="true" id="e8f99b49-0734-4de6-920d-6c3771121134" name="Changes" comment="README.md Updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/WebAppInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/advisor/AppWideExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/config/JPAConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/config/WebAppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/config/WebRootConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/controller/CustomerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/controller/ItemController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/controller/PlaceOrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/dto/CustomDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/dto/CustomerDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/dto/ItemDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/dto/OrderDetailsDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/dto/OrdersDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/entity/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/entity/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/entity/OrderDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/entity/OrderItem_PK.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/entity/Orders.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/repo/CustomerRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/repo/ItemRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/repo/OrderDetailsRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/repo/PlaceOrderRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/ItemService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/PlaceOrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/impl/CustomerServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/impl/CustomerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/impl/ItemServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/impl/ItemServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/impl/PlaceOrderServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/impl/PlaceOrderServiceImpl$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/service/impl/PlaceOrderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/util/ResponseUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/FastInfoset-1.2.15.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/byte-buddy-1.12.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/classmate-1.5.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/hibernate-commons-annotations-5.1.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/hibernate-core-5.6.14.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/istack-commons-runtime-3.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/jackson-annotations-2.14.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/jackson-core-2.14.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/jackson-databind-2.14.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/jackson-datatype-jsr310-2.14.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/jandex-2.4.2.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/javax.persistence-api-2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/jaxb-runtime-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/jboss-logging-3.4.3.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/modelmapper-3.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/mysql-connector-j-8.0.32.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/protobuf-java-3.21.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/slf4j-api-1.7.32.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-aop-5.3.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-beans-5.3.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-context-5.3.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-core-5.3.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-data-commons-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-data-jpa-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-expression-5.3.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-jcl-5.3.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-jdbc-5.3.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-orm-5.3.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-tx-5.3.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-web-5.3.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/spring-webmvc-5.3.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/stax-ex-1.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/lib/txw2-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/WebAppInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/advisor/AppWideExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/config/JPAConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/config/WebAppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/config/WebRootConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/controller/CustomerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/controller/ItemController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/controller/PlaceOrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/dto/CustomDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/dto/CustomerDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/dto/ItemDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/dto/OrderDetailsDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/dto/OrdersDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/entity/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/entity/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/entity/OrderDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/entity/OrderItem_PK.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/entity/Orders.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/repo/CustomerRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/repo/ItemRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/repo/OrderDetailsRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/repo/PlaceOrderRepo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/ItemService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/PlaceOrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/impl/CustomerServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/impl/CustomerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/impl/ItemServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/impl/ItemServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/impl/PlaceOrderServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/impl/PlaceOrderServiceImpl$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/service/impl/PlaceOrderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/util/ResponseUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/spring/controller/PlaceOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/spring/controller/PlaceOrderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,7 +233,9 @@
       <workItem from="1711847651634" duration="4166000" />
       <workItem from="1711901046586" duration="1570000" />
       <workItem from="1711902643834" duration="4373000" />
-      <workItem from="1711934493374" duration="3217000" />
+      <workItem from="1711934493374" duration="3287000" />
+      <workItem from="1711940878759" duration="3883000" />
+      <workItem from="1711945792985" duration="8192000" />
     </task>
     <task id="LOCAL-00001" summary="Project Refactored">
       <option name="closed" value="true" />
@@ -438,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711908202050</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="README.md Updated">
+      <option name="closed" value="true" />
+      <created>1711938460526</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711938460526</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +349,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project Refactored" />
-    <MESSAGE value="README.md Updated" />
     <MESSAGE value="Customer Delete Modified" />
     <MESSAGE value="Save Customer Using Request Body" />
     <MESSAGE value="Refactored" />
@@ -457,6 +359,7 @@
     <MESSAGE value="README.md Refactored" />
     <MESSAGE value="Item Controller Refactored" />
     <MESSAGE value="Manage Items Successfully" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manage Items Successfully" />
+    <MESSAGE value="README.md Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md Updated" />
   </component>
 </project>
