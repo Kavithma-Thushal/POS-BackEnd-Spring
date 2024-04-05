@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 /**
  * @author : Kavithma Thushal
  * @project : Spring-POS
@@ -22,7 +24,7 @@ public class ItemController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public ResponseUtil saveItem(@RequestBody ItemDTO dto) {
+    public ResponseUtil saveItem(@Valid @RequestBody ItemDTO dto) {
         service.saveItem(dto);
         return new ResponseUtil("200 OK", "saved successfully...!", null);
     }
@@ -35,7 +37,7 @@ public class ItemController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PutMapping
-    public ResponseUtil updateItem(@RequestBody ItemDTO dto) {
+    public ResponseUtil updateItem(@Valid @RequestBody ItemDTO dto) {
         service.updateItem(dto);
         return new ResponseUtil("200 OK", "updated successfully...!", null);
     }
