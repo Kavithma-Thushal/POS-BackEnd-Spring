@@ -40,14 +40,14 @@ public class PlaceOrderController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/LoadOrders")
+    @GetMapping(path = "/loadOrders")
     public ResponseUtil LoadOrders() {
         return new ResponseUtil("200 OK", "loaded successfully...! : ", service.LoadOrders());
     }
 
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/LoadOrderDetails")
+    @GetMapping(path = "/loadOrderDetails")
     public ResponseUtil LoadOrderDetails() {
         return new ResponseUtil("200 OK", "loaded successfully...! : ", service.LoadOrderDetails());
     }
