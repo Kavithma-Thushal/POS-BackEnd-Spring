@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 /**
  * @author : Kavithma Thushal
  * @project : Spring-POS
@@ -22,7 +24,7 @@ public class CustomerController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public ResponseUtil saveCustomer(@RequestBody CustomerDTO dto) {
+    public ResponseUtil saveCustomer(@Valid @RequestBody CustomerDTO dto) {
         service.saveCustomer(dto);
         return new ResponseUtil("200 OK", "saved successfully...!", null);
     }
@@ -35,7 +37,7 @@ public class CustomerController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PutMapping
-    public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto) {
+    public ResponseUtil updateCustomer(@Valid @RequestBody CustomerDTO dto) {
         service.updateCustomer(dto);
         return new ResponseUtil("200 OK", "updated successfully...!", null);
     }
