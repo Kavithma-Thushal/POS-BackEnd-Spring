@@ -27,19 +27,6 @@ public class PlaceOrderController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/LoadOrders")
-    public ResponseUtil LoadOrders() {
-        return new ResponseUtil("200 OK", "loaded successfully...! : ", service.LoadOrders());
-    }
-
-
-    @ResponseStatus(HttpStatus.CREATED)
-    @GetMapping(path = "/LoadOrderDetails")
-    public ResponseUtil LoadOrderDetails() {
-        return new ResponseUtil("200 OK", "loaded successfully...! : ", service.LoadOrderDetails());
-    }
-
-    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public ResponseUtil placeOrder(@RequestBody OrdersDTO dto) {
         service.placeOrder(dto);
@@ -50,5 +37,18 @@ public class PlaceOrderController {
     @GetMapping(path = "/ordersCount")
     public @ResponseBody CustomDTO getSumOrders() {
         return service.getSumOrders();
+    }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/LoadOrders")
+    public ResponseUtil LoadOrders() {
+        return new ResponseUtil("200 OK", "loaded successfully...! : ", service.LoadOrders());
+    }
+
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/LoadOrderDetails")
+    public ResponseUtil LoadOrderDetails() {
+        return new ResponseUtil("200 OK", "loaded successfully...! : ", service.LoadOrderDetails());
     }
 }

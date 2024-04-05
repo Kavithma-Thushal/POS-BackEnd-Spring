@@ -9,7 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8f99b49-0734-4de6-920d-6c3771121134" name="Changes" comment="Generate Order Id Refactored">
+    <list default="true" id="e8f99b49-0734-4de6-920d-6c3771121134" name="Changes" comment="Refactored">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/controller/PlaceOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/target/BackEnd-POS-1.0.0/WEB-INF/classes/lk/ijse/spring/controller/PlaceOrderController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/controller/PlaceOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/target/classes/lk/ijse/spring/controller/PlaceOrderController.class" afterDir="false" />
@@ -59,6 +60,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -238,6 +240,14 @@
       <workItem from="1711940878759" duration="3883000" />
       <workItem from="1711945792985" duration="10285000" />
       <workItem from="1711963476217" duration="1636000" />
+      <workItem from="1711967129835" duration="468000" />
+      <workItem from="1711967604937" duration="2853000" />
+      <workItem from="1712108948103" duration="15780000" />
+      <workItem from="1712148101018" duration="59000" />
+      <workItem from="1712148176009" duration="294000" />
+      <workItem from="1712149719226" duration="7015000" />
+      <workItem from="1712192523715" duration="110000" />
+      <workItem from="1712202574985" duration="215000" />
     </task>
     <task id="LOCAL-00001" summary="Project Refactored">
       <option name="closed" value="true" />
@@ -351,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711963308274</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactored">
+      <option name="closed" value="true" />
+      <created>1711967588047</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1711967588047</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +379,6 @@
     <MESSAGE value="Project Refactored" />
     <MESSAGE value="Customer Delete Modified" />
     <MESSAGE value="Save Customer Using Request Body" />
-    <MESSAGE value="Refactored" />
     <MESSAGE value="Search Customer Refactored" />
     <MESSAGE value="Customer Update Refactored" />
     <MESSAGE value="generateCustomer Added" />
@@ -371,6 +388,7 @@
     <MESSAGE value="Manage Items Successfully" />
     <MESSAGE value="README.md Updated" />
     <MESSAGE value="Generate Order Id Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generate Order Id Refactored" />
+    <MESSAGE value="Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored" />
   </component>
 </project>
