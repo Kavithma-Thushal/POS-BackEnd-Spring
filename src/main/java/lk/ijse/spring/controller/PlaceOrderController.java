@@ -30,7 +30,7 @@ public class PlaceOrderController {
     @PostMapping
     public ResponseUtil placeOrder(@RequestBody OrdersDTO dto) {
         service.placeOrder(dto);
-        return new ResponseUtil("200 OK", "Purchased Successfully...!", null);
+        return new ResponseUtil("200 OK", "purchased successfully...!", null);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
@@ -42,12 +42,12 @@ public class PlaceOrderController {
     @ResponseStatus(HttpStatus.CREATED)
     @GetMapping(path = "/loadOrders")
     public ResponseUtil LoadOrders() {
-        return new ResponseUtil("200 OK", "Loaded Successfully...! : ", service.LoadOrders());
+        return new ResponseUtil("200 OK", "loaded successfully...! : ", service.LoadOrders());
     }
 
     @ResponseStatus(HttpStatus.CREATED)
     @GetMapping(path = "/loadOrderDetails")
     public ResponseUtil LoadOrderDetails() {
-        return new ResponseUtil("200 OK", "Loaded Successfully...! : ", service.LoadOrderDetails());
+        return new ResponseUtil("200 OK", "loaded successfully...! : ", service.LoadOrderDetails());
     }
 }
