@@ -25,16 +25,23 @@ import java.util.ArrayList;
 @Service
 @Transactional
 public class PlaceOrderServiceImpl implements PlaceOrderService {
+
     @Autowired
     private PlaceOrderRepo repo;
 
     @Autowired
     private OrderDetailsRepo orRepo;
+
     @Autowired
     private ItemRepo itemRepo;
 
     @Autowired
     private ModelMapper mapper;
+
+    @Override
+    public CustomDTO OrderIdGenerate() {
+        return new CustomDTO(repo.getLastIndex());
+    }
 
     @Override
     public void placeOrder(OrdersDTO dto) {
@@ -53,6 +60,11 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     }
 
     @Override
+    public CustomDTO getSumOrders() {
+        return new CustomDTO(repo.getSumOrders());
+    }
+
+    @Override
     public ArrayList<OrdersDTO> LoadOrders() {
         return mapper.map(repo.findAll(), new TypeToken<ArrayList<OrdersDTO>>() {
         }.getType());
@@ -62,15 +74,5 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     public ArrayList<OrderDetailsDTO> LoadOrderDetails() {
         return mapper.map(orRepo.findAll(), new TypeToken<ArrayList<OrderDetailsDTO>>() {
         }.getType());
-    }
-
-    @Override
-    public CustomDTO OrderIdGenerate() {
-        return new CustomDTO(repo.getLastIndex());
-    }
-
-    @Override
-    public CustomDTO getSumOrders() {
-        return new CustomDTO(repo.getSumOrders());
     }
 }
