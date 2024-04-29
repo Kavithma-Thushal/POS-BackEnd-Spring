@@ -18,23 +18,15 @@ of the retail or hospitality industry while benefiting from the productivity and
 Spring ecosystem. Additionally, Spring Boot can be leveraged to simplify the setup and configuration of the application,
 facilitating rapid development and deployment
 
-### FrontEnd
+### Technology Stack
 
-* HTML
-* CSS
-* Bootstrap
-* JavaScript
-* JQuery
-* AJAX
-
-### BackEnd
-
-* Spring
-* Java 8
-* MySQL
-* Maven
-* Hibernate
-* Tomcat 9
+✅Java 8<br/>
+✅Spring<br/>
+✅MySQL<br/>
+✅Hibernate<br/>
+✅Maven<br/>
+✅Tomcat 9<br/>
+✅Layered Architecture<br/>
 
 ### Functions
 
@@ -45,7 +37,7 @@ facilitating rapid development and deployment
 
 ### How to use
 
-* Clone this repo https://github.com/Thushal2001/Spring-POS.git
+* Clone this repo https://github.com/Kavithma-Thushal/Spring-POS.git
 * Reload the `pom.xml`
 * Run the Web Application
 
@@ -60,6 +52,6 @@ facilitating rapid development and deployment
 
 #### This project is licensed under the [MIT License](LICENSE)
 
-#### © 2024 All Right Reserved, Designed By [Kavithma Thushal](https://github.com/Thushal2001)
+#### © 2024 All Right Reserved, Designed By [Kavithma Thushal](https://github.com/Kavithma-Thushal)
 
 </div>
